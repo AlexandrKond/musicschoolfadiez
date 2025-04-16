@@ -1,0 +1,244 @@
+.teachers-section {
+    padding: 20px 0 60px; 
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  
+  .teachers-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .teachers-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .teachers-title {
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-top: 0;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .teachers-subtitle {
+    font-size: 1.2rem;
+    color: var(--dark-green);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .teacher-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(26, 75, 46, 0.1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(26, 75, 46, 0.15);
+  }
+  
+  .teacher-image-container {
+    position: relative;
+    height: 250px; 
+    overflow: hidden;
+  }
+  
+  .teacher-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center center;
+  }
+  
+  .teacher-specialty {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(26, 75, 46, 0.8);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .teacher-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--gold-accent);
+    color: var(--dark-green
+);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  
+  .teacher-info {
+    padding: 25px;
+  }
+  
+  .teacher-name {
+    font-size: 1.4rem;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+  }
+  
+  .teacher-bio {
+    color: var(--dark-green
+);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .teacher-details {
+    margin-bottom: 20px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--dark-green
+);
+  }
+  
+  .detail-icon {
+    font-size: 1.2rem;
+    color: var(--gold-accent);
+  }
+  
+  .teacher-contacts {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .contact-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(232, 248, 241, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-green);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    background: var(--accent-green);
+    color: white;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    .teachers-section {
+      padding: 30px 1rem 50px;
+    }
+  
+    .teachers-title {
+      font-size: 2rem;
+    }
+  
+    .teachers-subtitle {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  
+    .teacher-card {
+      border-radius: 16px;
+    }
+  
+    .teacher-image-container {
+      height: 200px; 
+    }
+  
+    .teacher-info {
+      padding: 20px;
+    }
+  
+    .teacher-name {
+      font-size: 1.2rem;
+    }
+  
+    .teacher-bio {
+      font-size: 0.95rem;
+    }
+  
+    .teacher-badge {
+      top: 15px;
+      right: 15px;
+      font-size: 0.75rem;
+      padding: 4px 12px;
+    }
+  
+    .teacher-specialty {
+      padding: 12px;
+      font-size: 0.95rem;
+    }
+  
+    .contact-link {
+      width: 36px;
+      height: 36px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .teachers-title {
+      font-size: 1.75rem;
+    }
+  
+    .teachers-subtitle {
+      font-size: 0.95rem;
+    }
+  
+    .teacher-image-container {
+      height: 180px;
+    }
+  
+    .teacher-info {
+      padding: 16px;
+    }
+  
+    .teacher-name {
+      font-size: 1.1rem;
+    }
+  
+    .teacher-bio {
+      font-size: 0.9rem;
+    }
+  
+    .teacher-contacts {
+      justify-content: center;
+    }
+  
+    .teacher-grid {
+      gap: 20px;
+    }
+  }
+  

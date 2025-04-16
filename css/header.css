@@ -1,0 +1,333 @@
+.main-header {
+    background: linear-gradient(135deg, var( --accent-green) 0%, var(--accent-bg) );
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(46, 110, 76, 0.12);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+  
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+  }
+  
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 5px 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+.logo:hover {
+    transform: translateX(5px);
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--button-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text:before {
+    content: '♫';
+    color: white;
+    font-size: 1.4rem;
+}
+
+.logo-slogan {
+    font-size: 0.75rem;
+    opacity: 0.95;
+    line-height: 1.2;
+    color: var(--button-text);
+    font-weight: 500;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.main-nav a:hover {
+    color: var(--light-bg);
+}
+
+.main-nav a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--light-bg), white);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover:after {
+    width: 100%;
+}
+
+.hero-banner {
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    max-height: 900px;
+    background: 
+      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      url('../media/banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 110, 76, 0.6) 0%, rgba(91, 207, 150, 0.8) 100%);
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+    animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.hero-banner h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 25px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    line-height: 1.2;
+}
+
+.hero-banner p {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 40px;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--highlight-green);
+    color: white;
+    padding: 18px 45px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+
+.cta-button:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .main-header {
+      height: 70px; 
+      padding: 0 15px; 
+    }
+  
+    .header-content {
+      padding: 0 20px;
+    }
+  
+    .logo-text {
+      font-size: 1.5rem;
+    }
+  
+    .logo-slogan {
+      font-size: 0.65rem;
+    }
+  
+    .main-nav ul {
+      gap: 20px;
+    }
+  
+    .main-nav a {
+      font-size: 0.85rem; 
+    }
+  
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+      color: var(--text-light);
+    }
+  
+    .main-nav {
+      display: none;
+      width: 100%;
+    }
+  
+    .main-nav.open {
+      display: block;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: var(--header-gradient);
+      padding: 20px 0;
+      text-align: center;
+    }
+  
+    .main-nav a {
+      display: block;
+      padding: 10px 0;
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      padding: 12px 30px;
+      font-size: 1rem;
+    }
+  
+    .cta-button:before {
+      left: -100%;
+    }
+  
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger-menu div {
+      width: 30px;
+      height: 3px;
+      background-color: var(--text-light);
+      margin: 6px 0;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero-banner {
+      height: 70vh;
+      min-height: 400px;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  
+    .hero-banner h1 {
+      font-size: clamp(1.8rem, 8vw, 3rem);
+      margin-bottom: 15px;
+    }
+  
+    .hero-banner p {
+      font-size: clamp(1rem, 4vw, 1.3rem);
+      margin-bottom: 20px;
+    }
+  
+    .cta-button {
+      padding: 12px 30px;
+      font-size: 1rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-header {
+      height: 60px; 
+    }
+  
+    .header-content {
+      padding: 0 10px; 
+    }
+  
+    .logo-text {
+      font-size: 1.3rem;
+    }
+  
+    .logo-slogan {
+      font-size: 0.5rem;
+    }
+  
+    .main-nav ul {
+      gap: 15px;
+    }
+  
+    .main-nav a {
+      font-size: 0.8rem; 
+    }
+  
+    .hero-banner {
+      min-height: 350px;
+    }
+  
+    .hero-banner h1 {
+      font-size: clamp(1.5rem, 10vw, 2.5rem); 
+    }
+  
+    .hero-banner p {
+      font-size: clamp(0.9rem, 5vw, 1.2rem); 
+    }
+  
+    .cta-button {
+      padding: 10px 25px;
+      font-size: 0.95rem; 
+    }
+  }
+  

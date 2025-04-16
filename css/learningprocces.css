@@ -1,0 +1,127 @@
+.learning-process {
+    padding: 20px 0;
+    position: relative;
+    background: var(--background-light);
+    overflow: hidden;
+
+  }
+  
+  .timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--dark-green);
+    z-index: 0;
+  }
+  
+  .timeline-step {
+    position: relative;
+    width: 22%;
+    min-width: 200px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-green);
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 128, 96, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-step:hover .step-circle {
+    transform: scale(1.15);
+  }
+  
+  .timeline-step h3 {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .timeline-step p {
+    color: var(--dark-green);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+@media (max-width: 768px) {
+    .learning-process {
+      padding: 20px 10px; 
+    }
+  
+    .timeline {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 0 20px; 
+    }
+  
+    .timeline-line {
+      top: 40px;
+      width: 2px;
+    }
+  
+    .timeline-step {
+      width: 80%;
+      min-width: 160px;
+      margin-bottom: 40px;
+    }
+  
+    .step-circle {
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+  
+    .timeline-step h3 {
+      font-size: 1.1rem;
+    }
+  
+    .timeline-step p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline-line {
+      top: 30px; 
+    }
+  
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem; 
+    }
+  
+    .timeline-step h3 {
+      font-size: 1rem; 
+    }
+  
+    .timeline-step p {
+      font-size: 0.85rem; 
+    }
+  }
+  

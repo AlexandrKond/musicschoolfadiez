@@ -1,0 +1,170 @@
+:root {
+  --primary-bg: #f5fffb;       
+  --light-bg: #d6f5e3;        
+  --dark-green: #2e6e4c;        
+
+
+  --accent-bg: #8bd8b0;         
+
+  --highlight-green: #5ecf96;    
+
+  --main-gradient: linear-gradient(135deg, var(--light-bg) 0%, var(--accent-bg) 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark-green);
+  line-height: var(--line-height-normal);
+  padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: var(--font-xxl);
+}
+
+h2 {
+  font-size: var(--font-xl);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: var(--font-lg);
+  margin-bottom: 0.75rem;
+}
+
+h4, h5 {
+  font-size: var(--font-md);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--dark-green);
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--font-md);
+  font-weight: 400;
+  color: var(--dark-green);
+  line-height: var(--line-height-loose);
+  margin-top: -0.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--font-sm);
+  font-weight: 400;
+  line-height: var(--line-height-loose);
+  color: var(--dark-green);
+  margin-bottom: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-medium);
+}
+
+a:hover {
+  color: var(--highlight-green);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4, h5 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4, h5 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+}

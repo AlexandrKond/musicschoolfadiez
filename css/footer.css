@@ -1,0 +1,275 @@
+.main-footer {
+  background: linear-gradient(135deg, var( --accent-green) 0%, var(--accent-bg) );
+  color: var(--text-light);
+  padding: 3.5rem 1rem 2rem;
+  width: 100%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-text::before {
+  content: '♫';
+  color: var(--dark-green);
+}
+
+.logo-slogan {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.4rem;
+}
+
+.footer-about {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition-medium);
+}
+
+.footer-links a:hover {
+  color: var(--gold-accent);
+  transform: translateX(4px);
+}
+
+.contact-info-footer p {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.contact-info-footer i {
+  margin-right: 0.6rem;
+  font-size: 1rem;
+  color: var(--gold-accent);
+  min-width: 1rem;
+}
+
+.social-links-footer {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.social-icon-footer {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  transition: var(--transition-medium);
+}
+
+.social-icon-footer:hover {
+  background: var(--gold-accent);
+  color: var(--dark-green);
+  transform: translateY(-3px);
+}
+
+.contact-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(232, 248, 241, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-green);
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  background: var(--accent-green);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .logo-text {
+    font-size: 1.6rem;
+    gap: 0.3rem;
+  }
+
+  .logo-slogan {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+
+  .footer-about {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+  }
+
+  .footer-title {
+    font-size: 1rem; 
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .contact-info-footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info-footer i {
+    font-size: 0.9rem; 
+    margin-right: 0.4rem;
+  }
+
+  .social-links-footer {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .social-icon-footer {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer {
+    padding: 1.5rem 0.8rem 1rem; 
+  }
+
+  .footer-content {
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    text-align: left; 
+  }
+
+  .logo-text {
+    font-size: 1.4rem; 
+  }
+
+  .logo-slogan {
+    font-size: 0.75rem; 
+    margin-top: 0.3rem;
+  }
+
+  .footer-about {
+    font-size: 0.75rem; 
+    line-height: 1.3;
+  }
+
+  .footer-title {
+    font-size: 0.95rem; 
+  }
+
+  .footer-links li {
+    margin-bottom: 0.3rem; 
+  }
+
+  .footer-links a {
+    font-size: 0.85rem; 
+  }
+
+  .contact-info-footer p {
+    font-size: 0.85rem; 
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-info-footer i {
+    font-size: 0.85rem; 
+    margin-right: 0.3rem; 
+  }
+
+  .social-icon-footer {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+    margin-top: 1.5rem;
+  }
+}

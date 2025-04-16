@@ -1,0 +1,105 @@
+:root {
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-intensity: 0.1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 1rem;
+  background: #c1e2d554;
+  box-shadow:
+    0 4px 6px rgba(168, 91, 91, 0.1),
+    0 10px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-medium);
+  z-index: 1;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.12),
+    0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section {
+  padding: 0; 
+  position: relative;
+  isolation: isolate;
+}
+
+.section-divider {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 1.5rem 0 1.5rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  position: relative;
+  line-height: 1.2;
+  color: #222;
+  font-weight: 600;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 4px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(to right, #16a085, #1abc9c);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.section-title:hover::after {
+  width: 8rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; 
+    padding: 0.5rem; 
+  }
+
+  .section {
+    padding: 2rem 0; 
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem); 
+    margin: 1rem 0; 
+  }
+
+  .section-title::before {
+    width: 70%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem 1rem; 
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 7vw, 2rem); 
+    margin: 0.5rem 0; 
+  }
+
+  .section-title::before {
+    width: 60%; 
+  }
+}
+
+
